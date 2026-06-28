@@ -428,37 +428,16 @@ main,
   border-radius: var(--radius);
   background: var(--bg-card);
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--accent);
   position: relative;
   overflow: hidden;
 }
 
-.avatar-bg {
-  position: absolute;
-  inset: 0;
+.avatar-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: blur(3px) brightness(0.5) saturate(0.85);
-  transform: scale(1.1);
-}
-
-.avatar-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(14, 14, 14, 0.35) 0%,
-    rgba(14, 14, 14, 0.65) 100%
-  );
-  z-index: 1;
+  display: block;
 }
 
 .avatar-placeholder::before {
@@ -469,13 +448,7 @@ main,
   bottom: 0;
   width: 3px;
   background: var(--accent);
-  z-index: 3;
-}
-
-.avatar-initials {
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .about-text p {
